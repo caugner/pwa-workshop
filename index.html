@@ -67,7 +67,11 @@
 
   <div class="players"></div>
   <script src="bundle.js"></script>
-  <script src="service.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+  }
+  </script>
 </body>
 
 </html>
